@@ -57,7 +57,7 @@ How to use
 
 ### Compile and Run ###
     % make 
-    % ./lensdriver /dev/tty.usb[Tab]
+    % ./lensdriver /dev/tty.usb`[Tab]`
     % ./lensdriver /dev/tty.usbmodem1411  (for example)
 
 References
