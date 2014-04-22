@@ -11,17 +11,38 @@ uint16_t cmd_get_maxhardwarecurrent(int fd) {cmd_get_maxhardwarecurrent8,166
 cmd_get_uppercurrent_calibration.c,90
 int16_t cmd_get_uppercurrent_calibration(int fd) {cmd_get_uppercurrent_calibration9,219
 
+cmd_run_dc.c,78
+int cmd_run_dc(int fd, int16_t ucurrent, int16_t lcurrent) {cmd_run_dc9,219
+
 cmd_run_sinusoidal.c,108
 int cmd_run_sinusoidal(int fd, int16_t ucurrent, int16_t lcurrent, uint32_t mHz) {cmd_run_sinusoidal8,166
 
+cmd_run_square.c,100
+int cmd_run_square(int fd, int16_t ucurrent, int16_t lcurrent, uint32_t mHz) {cmd_run_square9,219
+
+cmd_run_triangular.c,108
+int cmd_run_triangular(int fd, int16_t ucurrent, int16_t lcurrent, uint32_t mHz) {cmd_run_triangular9,219
+
+cmd_set_calibration.c,98
+uint16_t cmd_set_calibration(int fd, uint8_t* data, uint16_t current) {cmd_set_calibration9,219
+
 cmd_set_current.c,65
 int cmd_set_current(int fd, uint32_t io) {cmd_set_current9,219
+
+cmd_set_current_4096.c,75
+int cmd_set_current_4096(int fd, uint16_t xi) {cmd_set_current_40969,219
+
+cmd_set_dc.c,42
+int cmd_set_dc(int fd) {cmd_set_dc9,219
 
 cmd_set_frequency.c,71
 int cmd_set_frequency(int fd, uint32_t freq) {cmd_set_frequency8,166
 
 cmd_set_lowersignalcurrent.c,91
 int cmd_set_lowersignalcurrent(int fd, int16_t current) {cmd_set_lowersignalcurrent8,166
+
+cmd_set_maxhardwarecurrent.c,100
+uint16_t cmd_set_maxhardwarecurrent(int fd, uint16_t maxcurrent) {cmd_set_maxhardwarecurrent9,219
 
 cmd_set_mode.c,61
 int cmd_set_mode(int fd, uint8_t* data) {cmd_set_mode8,166
@@ -31,6 +52,12 @@ int cmd_set_signalproperty(int fd, uint8_t* data) {cmd_set_signalproperty8,166
 
 cmd_set_sinusoidal.c,58
 int cmd_set_sinusoidal(int fd) {cmd_set_sinusoidal8,166
+
+cmd_set_square.c,50
+int cmd_set_square(int fd) {cmd_set_square9,219
+
+cmd_set_triangular.c,58
+int cmd_set_triangular(int fd) {cmd_set_triangular9,219
 
 cmd_set_uppersignalcurrent.c,91
 int cmd_set_uppersignalcurrent(int fd, int16_t current) {cmd_set_uppersignalcurrent8,166
@@ -89,20 +116,20 @@ write_device.c,72
 int write_device(int fd, uint8_t* cmd, int nbytes) {write_device8,166
 
 lensdriver.h,560
-#define __LENSDRIVER_H____LENSDRIVER_H__7,166
-#define false false20,388
-#define true true21,404
-#define DEBUG DEBUG23,420
-#define MAX_READ_BYTES MAX_READ_BYTES24,436
-#define ANS_READY ANS_READY26,463
-#define ANS_CRC_ERROR ANS_CRC_ERROR27,497
-#define RED RED29,528
-#define GREEN GREEN30,555
-#define YELLOW YELLOW31,582
-#define BLUE BLUE32,609
-#define MAGENTA MAGENTA33,636
-#define CYAN CYAN34,663
-#define DEFAULT DEFAULT35,690
-#define UNDER_LINE UNDER_LINE36,717
-#define BOLD BOLD37,748
-#define FONT_DEFAULT FONT_DEFAULT38,779
+#define __LENSDRIVER_H____LENSDRIVER_H__8,219
+#define false false23,479
+#define true true24,495
+#define DEBUG DEBUG26,511
+#define MAX_READ_BYTES MAX_READ_BYTES27,527
+#define ANS_READY ANS_READY29,554
+#define ANS_CRC_ERROR ANS_CRC_ERROR30,588
+#define RED RED32,619
+#define GREEN GREEN33,646
+#define YELLOW YELLOW34,673
+#define BLUE BLUE35,700
+#define MAGENTA MAGENTA36,727
+#define CYAN CYAN37,754
+#define DEFAULT DEFAULT38,781
+#define UNDER_LINE UNDER_LINE39,808
+#define BOLD BOLD40,839
+#define FONT_DEFAULT FONT_DEFAULT41,870

@@ -1,7 +1,8 @@
 /*
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Tue, 22 Apr 2014 23:34:21 +0900
+ *         Yuichiro Nakai <nakai@fun.bio.keio.ac.jp>
+ * Last modified: Tue, 22 Apr 2014 23:37:32 +0900
  */
 #ifndef __LENSDRIVER_H__
 #define __LENSDRIVER_H__
