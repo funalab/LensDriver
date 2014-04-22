@@ -1,7 +1,7 @@
 /*
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Tue, 18 Jun 2013 00:06:43 +0900
+ * Last modified: Tue, 22 Apr 2014 22:32:34 +0900
  */
 #include "lensdriver.h"
 
@@ -48,11 +48,11 @@ void config_serial(int fd) {
 
   /* Set the new options for the port */
   if(tcsetattr(fd, TCSANOW, &term) == -1) {
-    perror("Cannot set termios ");
+    perror("ERROR: Cannot set termios ");
     exit(-1);
   }
   if (DEBUG) {
-    printf("tcsetattr: success\n");
+    printf("  %stcsetattr: success%s\n", GREEN, DEFAULT);
   }
 }
 
