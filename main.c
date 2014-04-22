@@ -1,7 +1,7 @@
 /*
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Tue, 18 Jun 2013 19:35:47 +0900
+ * Last modified: Tue, 22 Apr 2014 23:03:15 +0900
  */
 #include "lensdriver.h"
 
@@ -18,15 +18,17 @@ int main(int argc, char* argv[]) {
   }
   /* Open device */
   fd = dev_open_setup(argv[1]);
-
+ 
+  /* uint8_t tmpbuf; */
+  /* read_device(fd, &tmpbuf, 1); */
   /* Start */
   if (cmd_start(fd) == -1) {
     safe_exit(fd);
   }
   /* Get upper current limit calibration */
-  cmd_get_uppercurrent_calibration(fd);
+  /* cmd_get_uppercurrent_calibration(fd); */
   /* Get lower current limit calibration */
-  cmd_get_lowercurrent_calibration(fd);
+  /* cmd_get_lowercurrent_calibration(fd); */
   /* Get maximum hardware current */
   cmd_get_maxhardwarecurrent(fd);
 

@@ -2,7 +2,7 @@
  * Driver for Optotune LensDriver4
  * Author: Yuichiro Nakai <nakai@fun.bio.keio.ac.jp>
  *         Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Tue, 18 Jun 2013 19:33:00 +0900
+ * Last modified: Tue, 22 Apr 2014 23:10:47 +0900
  */
 #include "lensdriver.h"
 
@@ -22,7 +22,8 @@ int cmd_set_current(int fd, uint32_t io) {
   }
 
   /* Set current */
-  xi = roundf(4096.0*(double)io/293.0);
+  /* add get_maxhardwarecurrent and replaced with 293.0 */
+  xi = roundf(4096.0*(double)io/((double)cmd_get_maxhardwarecurrent(fd) / 100.0));
   data[1] = get_high8(xi);
   data[2] = get_low8(xi);
 
