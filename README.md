@@ -24,6 +24,7 @@ How to use
 ----------
 ### Write a code using LensDriver API ###
     % vim main.c
+
     #include "lensdriver.h"
 
     int main(int argc, char* argv[]) {
@@ -57,8 +58,10 @@ How to use
 
 ### Compile and Run ###
     % make 
-    % ./lensdriver /dev/tty.usb`Tab`
-    % ./lensdriver /dev/tty.usbmodem1411  (for example)
+
+### Run ###
++   % ./lensdriver /dev/tty.usb`[Tab]`
++   % ./lensdriver /dev/tty.usbmodem1411  (for example)
 
 References
 ----------
