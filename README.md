@@ -56,12 +56,12 @@ How to use
       return 0;
     }
 
-### Compile and Run ###
+### Compile ###
     % make 
 
 ### Run ###
-+   % ./lensdriver /dev/tty.usb`[Tab]`
-+   % ./lensdriver /dev/tty.usbmodem1411  (for example)
++   ./lensdriver /dev/tty.usb`Tab`
++   ./lensdriver /dev/tty.usbmodem1411  (for example)
 
 References
 ----------
