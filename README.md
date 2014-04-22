@@ -22,7 +22,7 @@ Please install following libraries before compiling LensDriver.
 How to use
 ----------
 ### Write a code using LensDriver API ###
-    % vim main.c
+  % vim main.c
 
     #include "lensdriver.h"
 
