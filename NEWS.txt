@@ -1,6 +1,17 @@
            LensDriver NEWS -- History of user-visible changes
 
-- Last modified: Tue, 18 Jun 2013 19:29:26 +0900
+- Last modified: Tue, 22 Apr 2014 23:54:43 +0900
+
+======================================================================
+Version 0.1.0 (2014-04-22)
+======================================================================
+
+* New features
+
+  - High level API for DC, Square, Triangular is provided.
+    Now you can run DC, Square, Triangular current mode.
+
+  - High level API for set max hardware current is provided.
 
 ======================================================================
 Version 0.0.2 (2013-06-18)
