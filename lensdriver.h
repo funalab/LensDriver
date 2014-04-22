@@ -1,7 +1,7 @@
 /*
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Tue, 18 Jun 2013 19:31:28 +0900
+ * Last modified: Tue, 22 Apr 2014 23:34:21 +0900
  */
 #ifndef __LENSDRIVER_H__
 #define __LENSDRIVER_H__
@@ -16,6 +16,8 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <termios.h>
+#include <unistd.h>
+#include <time.h>
 
 #define false 0
 #define true 1
@@ -57,6 +59,7 @@ void config_serial(int fd);
 int cmd_set_mode(int fd, uint8_t* data);
 int cmd_set_signalproperty(int fd, uint8_t* data);
 uint16_t cmd_get_calibration(int fd, uint8_t* data);
+uint16_t cmd_set_calibration(int fd, uint8_t* data, uint16_t current);
 uint16_t Lranswer(uint8_t* Lranswer);
 uint16_t Lwanswer(uint8_t* Lwanswer);
 uint16_t Mranswer(uint8_t* Mranswer);
@@ -71,13 +74,20 @@ int cmd_start(int fd);
 int16_t cmd_get_uppercurrent_calibration(int fd);
 int16_t cmd_get_lowercurrent_calibration(int fd);
 uint16_t cmd_get_maxhardwarecurrent(int fd);
+uint16_t cmd_set_maxhardwarecurrent(int fd, uint16_t maxcurrent);
 int cmd_set_current(int fd, uint32_t io);
-int cmd_set_sinusoidal(int fd);
+int cmd_set_current_4096(int fd, uint16_t xi);
 int cmd_set_frequency(int fd, uint32_t freq);
 int cmd_set_uppersignalcurrent(int fd, int16_t current);
 int cmd_set_lowersignalcurrent(int fd, int16_t current);
+int cmd_set_sinusoidal(int fd);
+int cmd_set_square(int fd);
+int cmd_set_triangular(int fd);
+int cmd_set_dc(int fd);
 int cmd_run_sinusoidal(int fd, int16_t ucurrent, int16_t lcurrent, uint32_t mHz);
-
+int cmd_run_square(int fd, int16_t ucurrent, int16_t lcurrent, uint32_t mHz);
+int cmd_run_triangular(int fd, int16_t ucurrent, int16_t lcurrent, uint32_t mHz);
+int cmd_run_dc(int fd, int16_t ucurrent, int16_t lcurrent);
 /** Utility function **/
 void print_buffer(uint8_t *buf, int nbytes);
 int usage(char *argv[]);
