@@ -1,0 +1,28 @@
+           LensDriver NEWS -- History of user-visible changes
+
+- Last modified: Tue, 18 Jun 2013 19:29:26 +0900
+
+======================================================================
+Version 0.0.2 (2013-06-18)
+======================================================================
+
+* New features
+
+  - Write to device supported.
+    Now you can get/set current, frequency, upper current limit etc.
+    from/to the device.
+
+  - High level API is provided.
+    Only a few lines of code is required to manipulate the device.
+    See lensdriver.h.
+
+  - Utility functions.
+    Severay utility functions for handling bits and bytes are provided
+    in crc.c.
+
+======================================================================
+Version 0.0.1 (2013-06-17)
+======================================================================
+
+* Initial release, 17 June 2013.
+

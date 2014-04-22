@@ -1,0 +1,19 @@
+Optotune LensDriver - Driver for Optotune LENS DRIVER 4.
+ 
+Copyright (C) 2013 by the Keio University, Yokohama, Japan
+http://fun.bio.keio.ac.jp/software/
+
+Last modified: Tue, 18 Jun 2013 19:20:33 +0900
+
+* Primary developed by
+  - Yuichiro Nakai
+  - Akira Funahashi
+
+* With substantial contributions from 
+  - Noriko Hiroi
+
+* Contact:
+  - LensDriver development team
+     http://fun.bio.keio.ac.jp/software/
+     mailto:info@fun.bio.keio.ac.jp
+

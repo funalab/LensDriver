@@ -1,0 +1,108 @@
+
+cmd_get_calibration.c,80
+uint16_t cmd_get_calibration(int fd, uint8_t* data) {cmd_get_calibration9,219
+
+cmd_get_lowercurrent_calibration.c,90
+int16_t cmd_get_lowercurrent_calibration(int fd) {cmd_get_lowercurrent_calibration8,166
+
+cmd_get_maxhardwarecurrent.c,79
+uint16_t cmd_get_maxhardwarecurrent(int fd) {cmd_get_maxhardwarecurrent8,166
+
+cmd_get_uppercurrent_calibration.c,90
+int16_t cmd_get_uppercurrent_calibration(int fd) {cmd_get_uppercurrent_calibration9,219
+
+cmd_run_sinusoidal.c,108
+int cmd_run_sinusoidal(int fd, int16_t ucurrent, int16_t lcurrent, uint32_t mHz) {cmd_run_sinusoidal8,166
+
+cmd_set_current.c,65
+int cmd_set_current(int fd, uint32_t io) {cmd_set_current9,219
+
+cmd_set_frequency.c,71
+int cmd_set_frequency(int fd, uint32_t freq) {cmd_set_frequency8,166
+
+cmd_set_lowersignalcurrent.c,91
+int cmd_set_lowersignalcurrent(int fd, int16_t current) {cmd_set_lowersignalcurrent8,166
+
+cmd_set_mode.c,61
+int cmd_set_mode(int fd, uint8_t* data) {cmd_set_mode8,166
+
+cmd_set_signalproperty.c,81
+int cmd_set_signalproperty(int fd, uint8_t* data) {cmd_set_signalproperty8,166
+
+cmd_set_sinusoidal.c,58
+int cmd_set_sinusoidal(int fd) {cmd_set_sinusoidal8,166
+
+cmd_set_uppersignalcurrent.c,91
+int cmd_set_uppersignalcurrent(int fd, int16_t current) {cmd_set_uppersignalcurrent8,166
+
+cmd_start.c,40
+int cmd_start(int fd) {cmd_start8,166
+
+config_serial.c,49
+void config_serial(int fd) {config_serial8,166
+
+crc.c,624
+uint16_t crc16_update(uint16_t crc, uint8_t a) {crc16_update9,219
+uint16_t getcrc(uint8_t *data, int nbytes) {getcrc21,422
+uint8_t get_low8(uint16_t crc16) {get_low830,625
+uint8_t get_high8(uint16_t crc16) {get_high834,686
+uint16_t get_uint16(uint8_t high, uint8_t low) {get_uint1638,746
+uint8_t* set_uint8array16(uint16_t uint16, uint8_t* array) {set_uint8array1643,864
+uint8_t* set_uint8array32(uint32_t uint32, uint8_t* array) {set_uint8array3249,1008
+uint16_t get_limit(uint8_t* answer) {get_limit57,1224
+uint16_t checkcrc(void) {checkcrc65,1371
+int main2(int argc, char const* argv[]) {main277,1683
+
+dev_open_setup.c,61
+int dev_open_setup(char* device_file) {dev_open_setup8,166
+
+main.c,46
+int main(int argc, char* argv[]) {main8,166
+
+parse_answer.c,329
+uint16_t Lranswer(uint8_t* Lranswer) {Lranswer9,219
+uint16_t Lwanswer(uint8_t* Lwanswer) {Lwanswer13,291
+uint16_t Mranswer(uint8_t* Mranswer) {Mranswer17,363
+uint16_t Mwanswer(uint8_t* Mwanswer) {Mwanswer21,435
+uint16_t Uranswer(uint8_t* Uranswer) {Uranswer25,507
+uint16_t Uwanswer(uint8_t* Uwanswer) {Uwanswer29,579
+
+print_buffer.c,65
+void print_buffer(uint8_t *buf, int nbytes) {print_buffer8,166
+
+read_device.c,76
+uint8_t* read_device(int fd, uint8_t *rbuf, int nbytes) {read_device8,166
+
+safe_exit.c,40
+int safe_exit(int fd) {safe_exit8,166
+
+show_config.c,45
+void show_config(int fd) {show_config8,166
+
+uint8ncmp.c,63
+int uint8ncmp(uint8_t* s, uint8_t* t, int n) {uint8ncmp8,166
+
+usage.c,38
+int usage(char* argv[]) {usage8,166
+
+write_device.c,72
+int write_device(int fd, uint8_t* cmd, int nbytes) {write_device8,166
+
+lensdriver.h,560
+#define __LENSDRIVER_H____LENSDRIVER_H__7,166
+#define false false20,388
+#define true true21,404
+#define DEBUG DEBUG23,420
+#define MAX_READ_BYTES MAX_READ_BYTES24,436
+#define ANS_READY ANS_READY26,463
+#define ANS_CRC_ERROR ANS_CRC_ERROR27,497
+#define RED RED29,528
+#define GREEN GREEN30,555
+#define YELLOW YELLOW31,582
+#define BLUE BLUE32,609
+#define MAGENTA MAGENTA33,636
+#define CYAN CYAN34,663
+#define DEFAULT DEFAULT35,690
+#define UNDER_LINE UNDER_LINE36,717
+#define BOLD BOLD37,748
+#define FONT_DEFAULT FONT_DEFAULT38,779
