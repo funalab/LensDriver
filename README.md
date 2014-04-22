@@ -1,8 +1,7 @@
 LensDriver
 ======================
-This program is a driver for Optotune LENS DRIVER 4.
-By using provided highlevel API, user can easily
-manipulate Optotune EL-10-30 from their C program.
+This program is a driver for [Optotune LENS DRIVER 4](http://www.optotune.com/products/focus-tunable-lenses/lens-driver-4 "Optotune LENS DRIVER 4").
+By using provided API, user can easily manipulate Optotune EL-10-30 from their C program.
 
 ![Screenshot](http://fun.bio.keio.ac.jp/~funa/gitblit/lensdriver.png "Screenshot of sample program running by using LensDriver")
 
