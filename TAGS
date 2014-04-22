@@ -1,4 +1,7 @@
 
+clear_recv_buffer.c,56
+int clear_recv_buffer(int fd) {clear_recv_buffer8,166
+
 cmd_get_calibration.c,80
 uint16_t cmd_get_calibration(int fd, uint8_t* data) {cmd_get_calibration9,219
 
@@ -97,8 +100,8 @@ uint16_t Uwanswer(uint8_t* Uwanswer) {Uwanswer29,579
 print_buffer.c,65
 void print_buffer(uint8_t *buf, int nbytes) {print_buffer8,166
 
-read_device.c,76
-uint8_t* read_device(int fd, uint8_t *rbuf, int nbytes) {read_device8,166
+read_device.c,59
+int read_device(int fd, uint8_t *rbuf) {read_device8,166
 
 safe_exit.c,40
 int safe_exit(int fd) {safe_exit8,166
@@ -115,21 +118,22 @@ int usage(char* argv[]) {usage8,166
 write_device.c,72
 int write_device(int fd, uint8_t* cmd, int nbytes) {write_device8,166
 
-lensdriver.h,560
+lensdriver.h,605
 #define __LENSDRIVER_H____LENSDRIVER_H__8,219
-#define false false23,479
-#define true true24,495
-#define DEBUG DEBUG26,511
-#define MAX_READ_BYTES MAX_READ_BYTES27,527
-#define ANS_READY ANS_READY29,554
-#define ANS_CRC_ERROR ANS_CRC_ERROR30,588
-#define RED RED32,619
-#define GREEN GREEN33,646
-#define YELLOW YELLOW34,673
-#define BLUE BLUE35,700
-#define MAGENTA MAGENTA36,727
-#define CYAN CYAN37,754
-#define DEFAULT DEFAULT38,781
-#define UNDER_LINE UNDER_LINE39,808
-#define BOLD BOLD40,839
-#define FONT_DEFAULT FONT_DEFAULT41,870
+#define false false22,459
+#define true true23,475
+#define DEBUG DEBUG25,491
+#define TIME_OUT_USEC TIME_OUT_USEC31,646
+#define MAX_READ_BYTES MAX_READ_BYTES32,675
+#define ANS_READY ANS_READY34,702
+#define ANS_CRC_ERROR ANS_CRC_ERROR35,736
+#define RED RED37,767
+#define GREEN GREEN38,794
+#define YELLOW YELLOW39,821
+#define BLUE BLUE40,848
+#define MAGENTA MAGENTA41,875
+#define CYAN CYAN42,902
+#define DEFAULT DEFAULT43,929
+#define UNDER_LINE UNDER_LINE44,956
+#define BOLD BOLD45,987
+#define FONT_DEFAULT FONT_DEFAULT46,1018

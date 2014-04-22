@@ -1,7 +1,7 @@
 /*
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Mon, 17 Jun 2013 23:07:41 +0900
+ * Last modified: Wed, 23 Apr 2014 01:01:39 +0900
  */
 #include "lensdriver.h"
 
@@ -19,5 +19,7 @@ int dev_open_setup(char* device_file) {
   printf("***********  Current Serial Setting  **********\n");
   show_config(fd);
   printf("***********************************************\n");
+  /* Clear receive buffer before we start */
+  clear_recv_buffer(fd);
   return fd;
 }

@@ -1,7 +1,7 @@
 /*
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Tue, 22 Apr 2014 23:03:15 +0900
+ * Last modified: Wed, 23 Apr 2014 01:09:37 +0900
  */
 #include "lensdriver.h"
 
@@ -18,9 +18,6 @@ int main(int argc, char* argv[]) {
   }
   /* Open device */
   fd = dev_open_setup(argv[1]);
- 
-  /* uint8_t tmpbuf; */
-  /* read_device(fd, &tmpbuf, 1); */
   /* Start */
   if (cmd_start(fd) == -1) {
     safe_exit(fd);
@@ -36,7 +33,7 @@ int main(int argc, char* argv[]) {
   if (cmd_set_current(fd, mA) == -1) {
     safe_exit(fd);
   }
-  sleep(5);
+  sleep(2);
 
   /* Run sinusoidal */
   if (cmd_run_sinusoidal(fd, ucurrent, lcurrent, mHz) == -1) {
