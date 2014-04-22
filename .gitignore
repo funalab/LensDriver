@@ -1,0 +1,28 @@
+# Object files
+*.o
+
+# from MacOSX
+.DS_Store
+
+# GDB, LLDB
+.gdb_history
+.lldb-history
+
+# CTags
+.tags
+.tags_sorted_by_file
+TAGS
+
+# Output files
+#out.dot
+#*.pdf
+
+# Binary files
+lensdriver
+a.out
+
+# Temporary files
+*~
+[#]*[#]
+.\#*
+.*.sw?
