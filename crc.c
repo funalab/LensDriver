@@ -2,7 +2,7 @@
  * Driver for Optotune LensDriver4
  * Author: Yuichiro Nakai <nakai@fun.bio.keio.ac.jp>
  *         Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Tue, 18 Jun 2013 18:48:44 +0900
+ * Last modified: Wed, 23 Apr 2014 02:25:39 +0900
  */
 #include "lensdriver.h"
 
@@ -24,7 +24,7 @@ uint16_t getcrc(uint8_t *data, int nbytes) {
   for (i = 0; i < nbytes; i++) {
     crc = crc16_update(crc, data[i]);
   }
-  return crc; //returns checksum over all elements
+  return crc; /* returns checksum over all elements */
 }
 
 uint8_t get_low8(uint16_t crc16) {
@@ -71,7 +71,7 @@ uint16_t checkcrc(void) {
     printf("%c:%d\n", data[i], crc);
   }
   printf("\n");
-  return crc; //returns checksum over all elements
+  return crc; /* returns checksum over all elements */
 }
 
 int main2(int argc, char const* argv[]) {

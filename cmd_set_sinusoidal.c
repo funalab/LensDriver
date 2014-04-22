@@ -1,7 +1,7 @@
 /*
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Tue, 18 Jun 2013 19:12:10 +0900
+ * Last modified: Wed, 23 Apr 2014 02:33:17 +0900
  */
 #include "lensdriver.h"
 
@@ -11,5 +11,5 @@ int cmd_set_sinusoidal(int fd) {
   if (DEBUG) {
     printf("%sSet sinusoidal%s\n", GREEN, DEFAULT);
   }
-  return cmd_set_mode(fd, data);
+  return cmd_set_mode(fd, data, sizeof(data));
 }

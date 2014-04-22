@@ -1,7 +1,7 @@
 /*
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Tue, 18 Jun 2013 19:12:17 +0900
+ * Last modified: Wed, 23 Apr 2014 02:36:34 +0900
  */
 #include "lensdriver.h"
 
@@ -15,6 +15,6 @@ int cmd_set_uppersignalcurrent(int fd, int16_t current) {
     printf("%sSet Upper signal current to : %d%s\n", GREEN, current, DEFAULT);
   }
   set_uint8array16(current, &data[4]);
-  cmd_set_signalproperty(fd, data);
+  cmd_set_signalproperty(fd, data, sizeof(data));
   return 0;
 }

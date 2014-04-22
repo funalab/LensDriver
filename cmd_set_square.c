@@ -2,7 +2,7 @@
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
  *         Yuichiro Nakai <nakai@fun.bio.keio.ac.jp>
- * Last modified: Tue, 22 Apr 2014 23:45:31 +0900
+ * Last modified: Wed, 23 Apr 2014 02:33:32 +0900
  */
 #include "lensdriver.h"
 
@@ -12,5 +12,5 @@ int cmd_set_square(int fd) {
   if (DEBUG) {
     printf("%sSet square%s\n", GREEN, DEFAULT);
   }
-  return cmd_set_mode(fd, data);
+  return cmd_set_mode(fd, data, sizeof(data));
 }

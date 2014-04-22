@@ -1,6 +1,24 @@
            LensDriver NEWS -- History of user-visible changes
 
-- Last modified: Wed, 23 Apr 2014 01:18:16 +0900
+- Last modified: Wed, 23 Apr 2014 02:52:59 +0900
+
+======================================================================
+Version 0.3.0 (2014-04-23)
+======================================================================
+
+* New features
+
+  - Switch backed to use blocking read in read_device() to make sure
+    that the driver will receive constant length of packet. Instead,
+    we now have non-blocking version of read, read_device_nb().
+    The non-blocking read is useful to read junk packets from the
+    device.
+
+* Bug fixes
+
+  - Fixed a code which might be a potensial bug of couting bytes.
+
+  - Some refactoring.
 
 ======================================================================
 Version 0.2.0 (2014-04-23)

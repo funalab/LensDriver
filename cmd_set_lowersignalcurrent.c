@@ -1,7 +1,7 @@
 /*
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Tue, 18 Jun 2013 19:11:19 +0900
+ * Last modified: Wed, 23 Apr 2014 02:36:13 +0900
  */
 #include "lensdriver.h"
 
@@ -12,7 +12,7 @@ int cmd_set_lowersignalcurrent(int fd, int16_t current) {
     return -1;
   }
   set_uint8array16(current, &data[4]);
-  cmd_set_signalproperty(fd, data);
+  cmd_set_signalproperty(fd, data, sizeof(data));
   if (DEBUG) {
     printf("%sSet Lower signal current to : %d%s\n", GREEN, current, DEFAULT);
   }

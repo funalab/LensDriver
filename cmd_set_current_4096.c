@@ -2,14 +2,14 @@
  * Driver for Optotune LensDriver4
  * Author: Yuichiro Nakai <nakai@fun.bio.keio.ac.jp>
  *         Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Tue, 18 Jun 2013 19:33:00 +0900
+ * Last modified: Wed, 23 Apr 2014 02:22:25 +0900
  */
 #include "lensdriver.h"
 
 int cmd_set_current_4096(int fd, uint16_t xi) {
   /*
    * index:                    0   1   2   3   4
-   * Send: uint8_t data[6] = {'A','x','x','L','H'};
+   * Send: uint8_t data[5] = {'A','x','x','L','H'};
    * Recv: none (or {'N','\r','\n'} on CRC error)
    */
   uint8_t data[5] = {'A','x','x','L','H'};
@@ -36,7 +36,7 @@ int cmd_set_current_4096(int fd, uint16_t xi) {
   if (DEBUG) {
     printf("%sSet current to %d [mA]%s\n", GREEN, xi, DEFAULT);
   }
-  write_device(fd, data, 5);
+  write_device(fd, data, sizeof(data));
 
   return 0;
 }

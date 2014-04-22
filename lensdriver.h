@@ -2,7 +2,7 @@
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
  *         Yuichiro Nakai <nakai@fun.bio.keio.ac.jp>
- * Last modified: Wed, 23 Apr 2014 01:02:30 +0900
+ * Last modified: Wed, 23 Apr 2014 02:35:25 +0900
  */
 #ifndef __LENSDRIVER_H__
 #define __LENSDRIVER_H__
@@ -25,11 +25,11 @@
 #define DEBUG 1
 /*
  * 9600 bps   = 1200 bytes/sec.
- *  120 bytes = 0.1 sec (100000 usec).
- *  I think it's better to set MAX_READ_BYTES less than 120.
+ *            =  120 bytes / 0.1 sec (100000 usec).
+ *  I think it's enough to have MAX_READ_BYTES as 120.
  */
 #define TIME_OUT_USEC 100000
-#define MAX_READ_BYTES 80
+#define MAX_READ_BYTES 120
 
 #define ANS_READY     "Ready\r\n"
 #define ANS_CRC_ERROR "N\r\n"
@@ -58,15 +58,16 @@ uint16_t crc16_update(uint16_t crc, uint8_t a);
 int uint8ncmp(uint8_t* s, uint8_t* t, int n);
 
 /** Low level API **/
-int read_device(int fd, uint8_t* rbuf);
+uint8_t* read_device(int fd, uint8_t* rbuf, int nbytes);
+int read_device_nb(int fd, uint8_t* rbuf);
 int write_device(int fd, uint8_t* cmd, int nbytes);
 void show_config(int fd);
 void config_serial(int fd);
 int clear_recv_buffer(int fd);
-int cmd_set_mode(int fd, uint8_t* data);
-int cmd_set_signalproperty(int fd, uint8_t* data);
-uint16_t cmd_get_calibration(int fd, uint8_t* data);
-uint16_t cmd_set_calibration(int fd, uint8_t* data, uint16_t current);
+int cmd_set_mode(int fd, uint8_t* data, int nbytes);
+int cmd_set_signalproperty(int fd, uint8_t* data, int nbytes);
+uint16_t cmd_get_calibration(int fd, uint8_t* data, int nbytes);
+uint16_t cmd_set_calibration(int fd, uint8_t* data, int nbytes, uint16_t current);
 uint16_t Lranswer(uint8_t* Lranswer);
 uint16_t Lwanswer(uint8_t* Lwanswer);
 uint16_t Mranswer(uint8_t* Mranswer);

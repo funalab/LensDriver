@@ -1,11 +1,32 @@
 /*
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Wed, 23 Apr 2014 01:07:12 +0900
+ * Last modified: Wed, 23 Apr 2014 01:57:15 +0900
  */
 #include "lensdriver.h"
 
-int read_device(int fd, uint8_t *rbuf) {
+uint8_t* read_device(int fd, uint8_t *rbuf, int nbytes) {
+  /* Blocking read for usual communication */
+  int rbytes;
+  int count = 0;
+  uint8_t t;
+  /* Read from device */
+  while(count < nbytes) {
+    rbytes = read(fd, &t, 1);
+    if (rbytes > 0) {
+      rbuf[count] = t;
+      count ++;
+    }
+  }
+  if (DEBUG) {
+    printf(" Read: ");
+    print_buffer(rbuf, nbytes);
+  }
+  return rbuf;
+}
+
+int read_device_nb(int fd, uint8_t *rbuf) {
+  /* Non-blocking read for junk packets */
   int nbytes = 0;
   int nfds;
   fd_set readfds;
