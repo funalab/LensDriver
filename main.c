@@ -1,7 +1,7 @@
 /*
  * Driver for Optotune LensDriver4
  * Author: Akira Funahashi <funa@bio.keio.ac.jp>
- * Last modified: Thu, 01 May 2014 22:40:40 +0900
+ * Last modified: Thu, 01 May 2014 22:42:33 +0900
  */
 #include "lensdriver.h"
 
@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
   /* Get maximum hardware current */
   /* cmd_get_maxhardwarecurrent(fd); */
 
-  for(int i=300; i<=1300; i++) {
+  for(i = 300; i <= 1300; i++) {
     cmd_set_current_4096(fd, i);
     /* wait for 100 msec */
     usleep(100000);
