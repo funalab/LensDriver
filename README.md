@@ -12,6 +12,7 @@ LensDriver requires following third-party application.
 Please install following libraries before compiling LensDriver.
 
 +   [Exuberant Ctags](http://ctags.sourceforge.net/ "Exuberant Ctags") :  
+
 ```sh
 % sudo port install ctags
 ```
@@ -68,8 +69,10 @@ int main(int argc, char* argv[]) {
 ```
 
 ### Run ###
-+   ./lensdriver /dev/tty.usb`Tab`
-+   ./lensdriver /dev/tty.usbmodem1411  (for example)
+```sh
+./lensdriver /dev/tty.usb[Tab]
+./lensdriver /dev/tty.usbmodem1411  (for example)
+```
 
 References
 ----------
