@@ -12,12 +12,16 @@ LensDriver requires following third-party application.
 Please install following libraries before compiling LensDriver.
 
 +   [Exuberant Ctags](http://ctags.sourceforge.net/ "Exuberant Ctags") :  
-      % sudo port install ctags
+```sh
+% sudo port install ctags
+```
 
 ### Build LensDriver ###
-    % git clone https://funa@fun.bio.keio.ac.jp:8443/git/LensDriver.git
-    % cd LensDriver  
-    % make
+```sh
+% git clone https://funa@fun.bio.keio.ac.jp:8443/git/LensDriver.git
+% cd LensDriver  
+% make
+```
 
 How to use
 ----------
@@ -74,11 +78,7 @@ References
 
 License
 -------
-Copyright &copy; 2013-2014 Funahashi Lab., Keio University
+Copyright &copy; 2013-2017 Funahashi Lab., Keio University
 Licensed under the [Apache License, Version 2.0][Apache]  
-Distributed under the [MIT License][MIT].  
-Dual licensed under the [MIT license][MIT] and [GPL license][GPL].
 
 [Apache]: http://www.apache.org/licenses/LICENSE-2.0
-[MIT]: http://www.opensource.org/licenses/mit-license.php
-[GPL]: http://www.gnu.org/licenses/gpl.html
