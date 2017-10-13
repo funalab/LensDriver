@@ -70,8 +70,8 @@ int main(int argc, char* argv[]) {
 
 ### Run ###
 ```sh
-./lensdriver /dev/tty.usb[Tab]
-./lensdriver /dev/tty.usbmodem1411  (for example)
+% ./lensdriver /dev/tty.usb[Tab]
+% ./lensdriver /dev/tty.usbmodem1411  # (for example)
 ```
 
 References
