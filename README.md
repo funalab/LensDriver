@@ -82,6 +82,6 @@ References
 License
 -------
 Copyright &copy; 2013-2017 Funahashi Lab., Keio University
-Licensed under the [Apache License, Version 2.0][Apache]  
+Licensed and distributed under the [LGPL License, version 2.1][LGPL].
 
-[Apache]: http://www.apache.org/licenses/LICENSE-2.0
+[LGPL]: https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html
