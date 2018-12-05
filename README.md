@@ -14,7 +14,7 @@ Please install following libraries before compiling LensDriver.
 +   [Exuberant Ctags](http://ctags.sourceforge.net/ "Exuberant Ctags") :
 
 ```sh
-% sudo port install ctags
+% sudo port install ctags  # by using MacPorts on macOS
 ```
 
 ### Build LensDriver ###
