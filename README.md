@@ -19,8 +19,8 @@ Please install following libraries before compiling LensDriver.
 
 ### Build LensDriver ###
 ```sh
-% git clone https://funa@fun.bio.keio.ac.jp:8443/git/LensDriver.git
-% cd LensDriver  
+% git clone https://gitlab.com/funalab/LensDriver.git
+% cd LensDriver/src
 % make
 ```
 
@@ -81,7 +81,7 @@ References
 
 License
 -------
-Copyright &copy; 2013-2017 Funahashi Lab., Keio University.
+Copyright &copy; 2013-2018 Funahashi Lab., Keio University.
 Licensed and distributed under the [LGPL License, version 2.1][LGPL].
 
 [LGPL]: https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html
