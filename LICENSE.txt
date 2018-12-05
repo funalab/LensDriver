@@ -1,6 +1,6 @@
            Licensing and Distribution Terms for LensDriver
 
-Copyright (C) 2013-2017 by the Keio University, Yokohama, Japan
+Copyright (C) 2013-2018 by the Keio University, Yokohama, Japan
  
 This file is part of LensDriver.
 

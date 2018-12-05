@@ -3,15 +3,15 @@ LensDriver
 This program is a driver for [Optotune LENS DRIVER 4](http://www.optotune.com/products/focus-tunable-lenses/lens-driver-4 "Optotune LENS DRIVER 4").
 By using provided API, user can easily manipulate Optotune EL-10-30 from their C program.
 
-![Screenshot](http://fun.bio.keio.ac.jp/~funa/gitblit/lensdriver.png "Screenshot of sample program running by using LensDriver")
+![Screenshot](https://fun.bio.keio.ac.jp/~funa/gitblit/lensdriver.png "Screenshot of sample program running by using LensDriver")
 
 How to Compile
 --------------
 ### Dependencies ###
-LensDriver requires following third-party application.  
+LensDriver requires following third-party application.
 Please install following libraries before compiling LensDriver.
 
-+   [Exuberant Ctags](http://ctags.sourceforge.net/ "Exuberant Ctags") :  
++   [Exuberant Ctags](http://ctags.sourceforge.net/ "Exuberant Ctags") :
 
 ```sh
 % sudo port install ctags
@@ -19,7 +19,7 @@ Please install following libraries before compiling LensDriver.
 
 ### Build LensDriver ###
 ```sh
-% git clone https://gitlab.com/funalab/LensDriver.git
+% git clone https://github.com/funalab/LensDriver.git
 % cd LensDriver/src
 % make
 ```
@@ -65,7 +65,7 @@ int main(int argc, char* argv[]) {
 
 ### Compile ###
 ```sh
-% make 
+% make
 ```
 
 ### Run ###
