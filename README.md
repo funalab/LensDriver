@@ -81,7 +81,7 @@ References
 
 License
 -------
-Copyright &copy; 2013-2018 Funahashi Lab., Keio University.
+Copyright &copy; 2013-2019 Funahashi Lab., Keio University.
 Licensed and distributed under the [LGPL License, version 2.1][LGPL].
 
 [LGPL]: https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html
