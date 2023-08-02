@@ -1,9 +1,9 @@
 Optotune LensDriver - Driver for Optotune LENS DRIVER 4.
 
-Copyright (C) 2013-2018 by the Keio University, Yokohama, Japan
+Copyright (C) 2013-2023 by the Keio University, Yokohama, Japan
 https://fun.bio.keio.ac.jp/
 
-Last modified: Thu, 06 Dec 2018 00:48:58 +0900
+Last modified: Wed, 02 Aug 2023 21:54:53 +0900
 
 * Primary developed by
   - Yuichiro Nakai
