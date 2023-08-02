@@ -20,6 +20,9 @@ TAGS
 # Binary files
 lensdriver
 a.out
+liblensdriver.*.dylib
+liblensdriver.a
+liblensdriver.dylib
 
 # Temporary files
 *~
